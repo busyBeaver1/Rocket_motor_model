@@ -137,7 +137,6 @@ def init():
             grain, area = get_grain_shape_custom(custom_grain, d, dots)
             img = numpy.ndarray(grain.shape + (3,), dtype='uint8')
             img[...] = 255
-            print(img.shape)
             ya1, xa1 = numpy.where(grain)
             img[ya1, xa1] = (((xa1 + ya1) % (dots * 2) > dots).astype('uint8') * 32 + 64).reshape(xa1.shape + (1,)).repeat(3, axis=1)
             img[cv2.erode(grain, circle) != grain] = 255, 0, 0
