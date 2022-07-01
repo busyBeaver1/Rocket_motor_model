@@ -226,7 +226,7 @@ def init():
         print('максимальная тяга:'                                            , max(Yt)                                                   , 'кгс')
         print('средняя тяга:'                                                 , sum(Yt) / len(Yt)                                         , 'кгс')
         print('импульс:'                                                      , sum(Yt) * 9.8 * timestep                                  , 'кг*м/с')
-        print('удельный импульс:'                                             , sum(Yt) * 9.8 * timestep / propellant * 1000.             , 'м*с')
+        print('удельный импульс:'                                             , sum(Yt) * 9.8 * timestep / propellant * 1000.             , 'м/с')
         print('!давление относительно атмосферного, а не абсолютное!')
         print('максимальное давление:'                                        , max(Yp)                                                   , 'атм')
         print('среднее давление:'                                             , sum(Yp) / len(Yp)                                         , 'атм')
